@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+
+import Portfolio from "./Portafolio";
+import Footer from "./Footer";
+import "./styles.css";
+import HeaderBase from "./Header";
+import { HeaderMegaMenu } from "./HeaderMegaMenu";
+import { FeaturesTitle } from "./FeaturesTitle";
+import { EmailBanner } from "./EmailBanner";
+import { FooterSocial } from "./FooterSocial";
+import { ContactUs } from "./ContactUs";
+import { ArticlesCardsGrid } from "./ArticlesCardsGrid";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <HeaderMegaMenu />
+      <FeaturesTitle />
+      <h1 style={{ textAlign: "center" }}>Proyectos</h1>
+      <ArticlesCardsGrid />
+      <ContactUs />
+      <FooterSocial />
     </div>
   );
 }
