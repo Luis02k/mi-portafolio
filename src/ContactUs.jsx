@@ -20,9 +20,7 @@ const useStyles = createStyles((theme) => ({
   wrapper: {
     minHeight: 400,
     boxSizing: "border-box",
-    backgroundImage: `linear-gradient(-60deg, ${
-      theme.colors[theme.primaryColor][4]
-    } 0%, ${theme.colors[theme.primaryColor][7]} 100%)`,
+    backgroundImage: `linear-gradient(-60deg, ${theme.colors["cyan"][3]} 0%, ${theme.colors["green"][8]} 100%)`,
     borderRadius: theme.radius.md,
     padding: `calc(${theme.spacing.xl} * 2.5)`,
 
@@ -76,7 +74,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   control: {
-    backgroundColor: theme.colors[theme.primaryColor][6],
+    backgroundColor: theme.colors["green"][6],
   },
 }));
 
