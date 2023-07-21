@@ -22,7 +22,9 @@ import {
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    padding: `calc(${theme.spacing.xl} * 2) ${theme.spacing.xl}`,
+    marginBottom: "10px",
+    paddingLeft: "15px",
+    paddingRight: "15px",
   },
 
   title: {
@@ -71,7 +73,7 @@ export function FeaturesTitle() {
         size={44}
         radius="md"
         variant="gradient"
-        gradient={{ deg: 133, from: "blue", to: "cyan" }}
+        gradient={{ deg: 133, from: "green", to: "cyan" }}
       >
         <feature.icon size={rem(26)} stroke={1.5} />
       </ThemeIcon>

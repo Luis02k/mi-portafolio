@@ -40,7 +40,7 @@ const useStyles = createStyles((theme) => ({
     transition: "transform 150ms ease, box-shadow 150ms ease",
 
     "&:hover": {
-      transform: "scale(1.01)",
+      transform: "scale(1.15)",
       boxShadow: theme.shadows.md,
     },
   },

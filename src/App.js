@@ -1,26 +1,52 @@
-import logo from "./logo.svg";
 import "./App.css";
-
-import Portfolio from "./Portafolio";
-import Footer from "./Footer";
 import "./styles.css";
-import HeaderBase from "./Header";
 import { HeaderMegaMenu } from "./HeaderMegaMenu";
 import { FeaturesTitle } from "./FeaturesTitle";
-import { EmailBanner } from "./EmailBanner";
 import { FooterSocial } from "./FooterSocial";
 import { ContactUs } from "./ContactUs";
 import { ArticlesCardsGrid } from "./ArticlesCardsGrid";
+import {
+  MantineProvider,
+  Title,
+  createStyles,
+  useMantineTheme,
+} from "@mantine/core";
+
+const useStyles = createStyles((theme) => ({
+  title: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontWeight: 600,
+    textAlign: "center",
+    marginTop: "10px",
+  },
+}));
 
 function App() {
+  const { classes } = useStyles();
   return (
     <div className="app">
-      <HeaderMegaMenu />
-      <FeaturesTitle />
-      <h1 style={{ textAlign: "center" }}>Proyectos</h1>
-      <ArticlesCardsGrid />
-      <ContactUs />
-      <FooterSocial />
+      <MantineProvider
+        withGlobalStyles
+        withNormalizeCSS
+        theme={{
+          colorScheme: "light",
+          colorScheme: "dark",
+          colors: {
+            dark: [],
+            light: [],
+          },
+        }}
+      >
+        <HeaderMegaMenu />
+        <FeaturesTitle />
+        <Title className={classes.title} order={1}>
+          Proyectos
+        </Title>
+
+        <ArticlesCardsGrid />
+        <ContactUs />
+        <FooterSocial />
+      </MantineProvider>
     </div>
   );
 }
